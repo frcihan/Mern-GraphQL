@@ -1,0 +1,43 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "start-client": "npm start --prefix client",
+    "develop": "concurrently -n 'server,client' -c 'red,blue' \"npm run server\" \"npm run start-client\"",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnclarusway/mern-stack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnclarusway/mern-stack/issues"
+  },
+  "homepage": "https://github.com/johnclarusway/mern-stack#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "express-validator": "^6.8.0",
+    "graphql": "^15.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.6"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.6"
+  }
+}
