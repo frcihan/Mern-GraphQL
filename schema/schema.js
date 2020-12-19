@@ -10,6 +10,7 @@ const {
 
 const BookType = new GraphQLObjectType({
     name: "Book",
+    description: "This is a book description!",
     fields: () => ({
         title: { type: GraphQLString },
         subtitle: { type: GraphQLString },
@@ -25,6 +26,7 @@ const BookType = new GraphQLObjectType({
 
 const RootQuery = new GraphQLObjectType({
     name: "RootQueryType",
+    description: "This is a Root description!",
     fields: {
         books: {
             type: new GraphQLList(BookType),
